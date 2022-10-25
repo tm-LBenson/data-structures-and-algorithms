@@ -64,7 +64,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < str.length + 1; i++) {
+    let j = str.length + 1;
+    result.push(str.slice(i, j - 1));
+  }
   return result;
 };
 
@@ -77,7 +80,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split('')
 };
 
 
