@@ -53,7 +53,15 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  return charArray.sort((a, b) => {
+    if (a.children.length !== b.children.length) {
+      return a.children.length - b.children.length;
+    } else if (a.children.length === b.children.length) {
+      return a.name.length - b.name.length;
+    }
+  });
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,7 +72,7 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  return /w/g.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +88,7 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  return /\d/.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +99,7 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  return /world/g.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +111,17 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+
+  const capWords = [];
+  for (let word of str.split(' ')) {
+    if (/[A-Z]/.test(word[0])) {
+      capWords.push(word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''));
+
+
+    }
+  }
+
+  return capWords;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +131,13 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  const cities = [];
+  for (let city of arr) {
+    if (/[A-J]/.test(city[0])) {
+      cities.push(city);
+    }
+  }
+  return cities;
 };
 
 /* ------------------------------------------------------------------------------------------------
