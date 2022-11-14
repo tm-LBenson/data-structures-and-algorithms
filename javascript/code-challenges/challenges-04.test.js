@@ -164,16 +164,21 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   const step1 = arr.sort((a, b) => a.lastName.localeCompare(b.lastName));
+
+
   const step2 = step1.sort((a, b) => {
-    if (a.lastName.localeCompare(b.lastName)) {
+    if (a.lastName === b.lastName) {
       return a.firstName.localeCompare(b.firstName);
     }
+
   });
+
   const step3 = step2.sort((a, b) => {
-    if (a.lastName.localeCompare(b.lastName) && a.firstName.localeCompare(b.firstName)) {
+    if (a.firstName === b.firstName && a.lastName === b.lastName) {
       return a.age - b.age;
     }
   });
+  console.log(step3);
   return step3;
 };
 
@@ -364,7 +369,7 @@ describe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
