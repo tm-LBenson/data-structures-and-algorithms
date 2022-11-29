@@ -178,7 +178,6 @@ const sortPeopleBetter = (arr) => {
       return a.age - b.age;
     }
   });
-  console.log(step3);
   return step3;
 };
 
