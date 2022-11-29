@@ -20,4 +20,4 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-[Code Challenge-01]()
+[Code Challenge-01](./data-structures-and-algorithms/javascript-401/challenge-class01/README.md)
