@@ -21,3 +21,6 @@ To run your tests
 ### 401 Data Structures, Code Challenges
 
 [Code Challenge-01](./javascript-401/challenge-class01/README.md)
+
+[Code Challenge-02](./javascript-401/challenge-class-02/README.md)
+
