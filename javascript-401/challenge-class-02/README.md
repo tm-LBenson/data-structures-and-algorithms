@@ -6,7 +6,7 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 ## Whiteboard Process
 
-![whiteboard](./whiteboard-02.png)
+![whiteboard](./array-insert-shift.png)
 
 ## Approach & Efficiency
 
