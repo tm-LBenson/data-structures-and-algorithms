@@ -56,4 +56,58 @@ describe('Linked List', () => {
     expect(collection[3]).toEqual('value4');
   });
 
+  it('Can successfully add a node to the end of the linked list', () => {
+    list.append('value5');
+
+    let collection = list.collection();
+
+    expect(collection.at(-1)).toEqual('value5');
+  });
+
+  it('Can successfully add multiple nodes to the end of a linked list', () => {
+    list.append('value5');
+    list.append('value6');
+    list.append('value7');
+    list.append('value8');
+    let collection = list.collection();
+    expect(collection).toHaveLength(9);
+    expect(collection.at(-1)).toEqual('value8');
+    expect(collection.at(-2)).toEqual('value7');
+    expect(collection.at(-3)).toEqual('value6');
+    expect(collection.at(-4)).toEqual('value5');
+  });
+
+  it('Can successfully insert a node before a node located i the middle of a linked list', () => {
+    list.insertBefore('value5', 'insertedBefore5');
+
+    let collection = list.collection();
+    expect(collection.at(4)).toEqual('insertedBefore5');
+    expect(collection).toHaveLength(10);
+  });
+
+  it('Can successfully insert a node before the first node of a linked list', () => {
+    list.insertBefore('value1', 'insertedFirstNode');
+
+    let collection = list.collection();
+    expect(collection.at(0)).toEqual('insertedFirstNode');
+    expect(collection).toHaveLength(11);
+  });
+
+  it('Can successfully insert after a node in the middle of the linked list', () => {
+    list.insertAfter('value4', 'AfterValue4');
+
+    let collection = list.collection();
+    expect(collection.at(5)).toEqual('AfterValue4');
+    expect(collection).toHaveLength(12);
+  });
+
+  it('Can successfully insert a node after the last node of the linked list', () => {
+    list.insertAfter('value8', 'insertLast');
+
+    let collection = list.collection();
+    expect(collection.at(-1)).toEqual('insertLast');
+    expect(collection).toHaveLength(13);
+  });
+
 });
+
