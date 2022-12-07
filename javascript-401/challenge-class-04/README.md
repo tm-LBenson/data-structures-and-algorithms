@@ -1,12 +1,12 @@
 # Singly Linked List
 
-Code Challenge 5-6-7
+Code Challenge 5-6-7-8
 
 [Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript-401/challenge-class-04)
 
 ## Challenge
 
-Lab 5: 
+Lab 5:
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 Create a Linked List class
 
@@ -65,5 +65,13 @@ The insert method has a big O of O(1) due to it not needed to iterate, list inse
 - Arguments: number
 - Returns: the value of the node kth from the tail of the linked list
 
+### Feature 4:
+
+`mergeLists(list1, list2)`
+
+- Arguments: linked list, linked list
+- Returns: a new linked list that combines the two lists
+
 ![Whiteboard](./whiteboard.png)
 ![Whiteboard2](./whiteboard2.png)
+![Whiteboard3](./whiteboard3.png)
