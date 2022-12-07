@@ -100,6 +100,20 @@ class LinkedList {
     return collectionArray;
   }
 
+  kth(k) {
+    const list = this.collection()
+    let index = -Math.abs(k + 1)
+    if (k === 0) {
+      index = -1;
+    }
+    if (k >= list.length) {
+      return 'Exception';
+    } else if (k < 0) {
+      return 'Exception';
+    }
+    return list.at(index);
+  }
+
 }
 
 
