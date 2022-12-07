@@ -6,7 +6,7 @@ Code Challenge 5-6-7
 
 ## Challenge
 
-Lab 5:
+Lab 5: 
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 Create a Linked List class
 
