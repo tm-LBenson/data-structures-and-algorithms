@@ -109,5 +109,32 @@ describe('Linked List', () => {
     expect(collection).toHaveLength(13);
   });
 
+  test('Where k is greater than the length of the linked list', () => {
+
+
+    expect(list.kth(14)).toEqual('Exception');
+  });
+
+  test('Where k and the length of the list are the same', () => {
+    expect(list.kth(12)).toEqual('insertedFirstNode');
+  });
+
+  test('Where k is not a positive integer', () => {
+    expect(list.kth(-12)).toEqual('Exception');
+  });
+
+  test('Where the linked list is of a size 1', () => {
+    const lengthOfOne = new LinkedList();
+    lengthOfOne.insert('lengthOfOne');
+
+    expect(lengthOfOne.kth(0)).toEqual('lengthOfOne');
+  });
+
+  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+
+    expect(list.kth(6)).toEqual('insertedBefore5');
+  });
+
 });
+
 
