@@ -117,4 +117,34 @@ class LinkedList {
 }
 
 
-module.exports = LinkedList;
+function zipLists(list1, list2) {
+  let list3 = new Node(0)
+  let current = list3;
+  while (list1 && list2) {
+    if (list1.value < list2.value) {
+      current.next = list1;
+      current.next = list1.next
+    } else {
+      current.next = list2;
+      list2 = list2.next;
+    }
+    current.next = list1 || list2;
+    return list3.next
+  };
+};
+
+
+const list1 = new LinkedList()
+list1.insert(1)
+list1.insert(3)
+list1.insert(5)
+list1.insert(7)
+const list2 = new LinkedList()
+list1.insert(2)
+list1.insert(4)
+list1.insert(6)
+list1.insert(8)
+
+console.log(zipLists(list1, list2).toString());
+
+module.exports = { LinkedList, zipLists };
