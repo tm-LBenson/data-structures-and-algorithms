@@ -1,6 +1,6 @@
 # Singly Linked List
 
-Code Challenge 5-6
+Code Challenge 5-6-7
 
 [Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript-401/challenge-class-04)
 
@@ -58,4 +58,12 @@ The insert method has a big O of O(1) due to it not needed to iterate, list inse
 - arguments: value, new value
 - adds a new node with the given new value immediately after the first node that has the value specified
 
+### Feature 3:
+
+`list.kth(k)`
+
+- Arguments: number
+- Returns: the value of the node kth from the tail of the linked list
+
 ![Whiteboard](./whiteboard.png)
+![Whiteboard2](./whiteboard2.png)
