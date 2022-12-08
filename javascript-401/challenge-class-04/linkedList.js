@@ -160,6 +160,6 @@ list2.insert(4)
 list2.insert(6)
 list2.insert(8)
 
-console.log(zipLists(list1, list2).collection(), 'final');
+
 
 module.exports = { LinkedList, zipLists };
