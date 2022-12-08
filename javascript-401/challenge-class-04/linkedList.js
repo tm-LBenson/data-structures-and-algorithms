@@ -116,5 +116,50 @@ class LinkedList {
 
 }
 
+// collaborated with Trace to get this solution
+function zipLists(l1, l2) {
+  let list1 = l1.head
+  let list2 = l2.head
+  let list3 = new LinkedList()
+  list3.insert('removeLater');
+  let current = list3.head;
 
-module.exports = LinkedList;
+  while (list1 !== null || list2 !== null) {
+    if (list1 === null) {
+      current.next = list2;
+      list2 = list2.next;
+      continue;
+    }
+    if (list2 === null) {
+      current.next = list1;
+      list1 = list1.next;
+      continue;
+    }
+    if (list1.value >= list2.value) {
+      current.next = list1;
+      list1 = list1.next;
+    } else {
+      current.next = list2;
+      list2 = list2.next;
+    }
+    current = current.next;
+  }
+  list3.head = list3.head.next
+  return list3;
+};
+
+
+// const list1 = new LinkedList()
+// list1.insert(1)
+// list1.insert(3)
+// list1.insert(5)
+// list1.insert(7)
+// const list2 = new LinkedList()
+// list2.insert(2)
+// list2.insert(4)
+// list2.insert(6)
+// list2.insert(8)
+
+
+
+module.exports = { LinkedList, zipLists };
