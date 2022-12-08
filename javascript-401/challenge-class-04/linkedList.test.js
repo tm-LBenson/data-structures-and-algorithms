@@ -1,6 +1,7 @@
 'use strict';
 
-const {LinkedList} = require('./linkedList');
+const { describe } = require('eslint/lib/rule-tester/rule-tester');
+const { LinkedList, zipLists } = require('./linkedList');
 
 describe('Linked List', () => {
   const list = new LinkedList();
@@ -138,3 +139,23 @@ describe('Linked List', () => {
 });
 
 
+describe('zipLists function unit testing', () => {
+  test('Merges 2 linked lists successfully', () => {
+    const unitList1 = new LinkedList();
+    unitList1.insert(1);
+    unitList1.insert(3);
+    unitList1.insert(5);
+    unitList1.insert(7);
+    const unitList2 = new LinkedList();
+    unitList2.insert(2);
+    unitList2.insert(4);
+    unitList2.insert(6);
+    unitList2.insert(8);
+    const mergedList = zipLists(unitList1, unitList2);
+    const listAsString = mergedList.toString();
+    const listAsArray = mergedList.collection();
+
+    expect(listAsString).toEqual('{ 8 } -> { 7 } -> { 6 } -> { 5 } -> { 4 } -> { 3 } -> { 2 } -> { 1 } -> NULL');
+    expect(listAsArray).toHaveLength(8);
+  });
+});
