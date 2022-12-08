@@ -17,6 +17,7 @@ To run your tests
 - Change to the `javascript` folder
 - run `npm test` to run all of the tests
 - run `npm test ##` to only run tests for challenge ## (i.e. 01)
+- note 401 challenges are in a separeate folder called JAVASCRIPT-401 for easier test suite sorting
 
 ### 401 Data Structures, Code Challenges
 
@@ -26,5 +27,5 @@ To run your tests
 
 [Code Challenge-04](./javascript-401/challenge-class-03/README.md)
 
-[Code Challenge-06](./javascript-401/challenge-class-04/README.md)
+[Code Challenge-5-6-7-8](./javascript-401/challenge-class-04/README.md)
 
