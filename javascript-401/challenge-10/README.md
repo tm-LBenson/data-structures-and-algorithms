@@ -2,7 +2,7 @@
 
 Code Challenge 10
 
-[Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript-401/challenge-class-10)
+[Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript-401/challenge-10)
 
 ## Challenge
 
