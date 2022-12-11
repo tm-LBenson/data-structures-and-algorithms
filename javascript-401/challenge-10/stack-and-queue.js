@@ -53,7 +53,7 @@ class Queue {
 
   enqueue(value) {
     const node = new Node(value);
-    if (!this.front) {
+    if (this.front === null) {
       this.rear = node;
       this.front = node;
     } else {
@@ -66,7 +66,6 @@ class Queue {
   dequeue() {
     if (!this.front) throw new UnsupportedMethodError('The top is null');
     let temp = this.front;
-
     this.front = this.front.next;
     temp.next = null;
     return temp.value;
