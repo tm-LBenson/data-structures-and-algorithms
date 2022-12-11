@@ -27,6 +27,7 @@ class Stack {
   pop() {
     if (!this.top) throw new UnsupportedMethodError('The top is null');
     let temp = this.top;
+
     this.top = this.top.next;
     temp.next = null;
     return temp.value;
@@ -61,7 +62,6 @@ class Queue {
       this.rear = node;
     }
   }
-
 
   dequeue() {
     if (!this.front) throw new UnsupportedMethodError('The top is null');
