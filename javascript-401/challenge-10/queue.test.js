@@ -46,12 +46,23 @@ describe('Queue unit tests', () => {
     expect(queue.front).toBeNull();
   });
 
+  it('Can successfully return true on an empty queue with isEmpty', () => {
+
+    expect(queue.isEmpty()).toBeTruthy();
+  });
+
+  it('Can successfully return false on an nonempty queue with isEmpty', () => {
+    queue.enqueue('test');
+    expect(queue.isEmpty()).not.toBeTruthy();
+  });
+
   it('Calling dequeue or peek on empty queue raises exception', () => {
+    queue.dequeue();
     expect(() => {
-      queue.peek().toThrow('UnsupportedMethodError: The top is null');
-    });
+      queue.peek();
+    }).toThrow();
     expect(() => {
-      queue.dequeue().toThrow('UnsupportedMethodError: The top is null');
-    });
+      queue.dequeue();
+    }).toThrow();
   });
 });
