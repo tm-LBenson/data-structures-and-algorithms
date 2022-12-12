@@ -29,3 +29,5 @@ To run your tests
 
 [Code Challenge-5-6-7-8](./javascript-401/challenge-class-04/README.md)
 
+[Code Challenge-10-11](./javascript-401/challenge-10/README.md)
+
