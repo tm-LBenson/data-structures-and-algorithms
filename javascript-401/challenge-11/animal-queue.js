@@ -1,10 +1,4 @@
 'use strict';
-class UnsupportedMethodError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = 'UnsupportedMethodError';
-  }
-}
 
 class Node {
   constructor(value) {
@@ -12,8 +6,6 @@ class Node {
     this.next = null;
   }
 }
-
-
 
 class AnimalQueue {
   constructor() {
