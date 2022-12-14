@@ -1,10 +1,4 @@
 'use strict';
-class UnsupportedMethodError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = 'UnsupportedMethodError';
-  }
-}
 
 class Node {
   constructor(value) {
@@ -12,8 +6,6 @@ class Node {
     this.next = null;
   }
 }
-
-
 
 class AnimalQueue {
   constructor() {
@@ -49,21 +41,19 @@ class AnimalQueue {
   }
 
   dequeue(pref) {
-    if (pref !== 'cat' || pref !== 'dog') return null;
-    if (!this.front) throw new UnsupportedMethodError('The top is null');
 
     if (pref === 'cat') {
-      let temp = this.catFront;
+      if (this.catFront === null) return null;
+      let temp = this.catFront.value.value;
       this.catFront = this.catFront.next;
-      temp.next = null;
-      return temp.value;
+      return temp;
     } else if (pref === 'dog') {
-      let temp = this.dogFront;
+      if (this.dogFront === null) return null;
+      let temp = this.dogFront.value.value;
       this.dogFront = this.dogFront.next;
-      temp.next = null;
-      return temp.value;
+      return temp;
     }
-
+    if (pref !== 'cat' || pref !== 'dog') return null;
   }
 
 }
