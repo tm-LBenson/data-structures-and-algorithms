@@ -17,7 +17,7 @@ class Stack {
   }
 
   pop() {
-    if (!this.top) null;
+    if (!this.top) return null;
     let temp = this.top;
 
     this.top = this.top.next;
@@ -26,7 +26,7 @@ class Stack {
   }
 
   peek() {
-    if (!this.top) null;
+    if (!this.top) return null;
     return this.top.value;
   }
 
