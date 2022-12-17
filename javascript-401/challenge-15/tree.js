@@ -56,4 +56,20 @@ class Tree {
 }
 
 
+
+class BinaryTree extends Tree {
+  constructor() {
+    super();
+    this.root = null;
+  }
+  add() {
+    //add a value
+  }
+
+
+  contains() {
+    //returns a boolean
+  }
+}
+
 module.exports = { Node, Tree };
