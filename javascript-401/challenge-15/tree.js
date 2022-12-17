@@ -1,5 +1,7 @@
 'use strict';
 
+const { not } = require('cheerio/lib/api/traversing');
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -62,14 +64,30 @@ class BinaryTree extends Tree {
     super();
     this.root = null;
   }
-  add() {
-    //add a value
+  add(value) {
+    const node = new Node(value);
+    if (!this.root) return this.root = node;
+    const traverse = (node) => {
+      if (this.root.value > node.value) {
+        if (node.left) {
+          traverse(node.left);
+        } else {
+          node.left = node;
+        }
+      } else {
+        if (node.right) {
+          traverse(node.right)
+        } else {
+          node.right = node;
+        }
+      }
+    };
+    traverse(this.root);
   }
 
-
-  contains() {
-    //returns a boolean
+  contains(value) {
+    return this.postOrder.contains(value);
   }
+
 }
-
-module.exports = { Node, Tree };
+module.exports = { Node, Tree, BinaryTree };
