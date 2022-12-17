@@ -14,10 +14,10 @@ class Tree {
   }
 
   preOrder() {
-
+    const values = [];
     const traverse = (node) => {
 
-      console.log(node.value);
+      values.push(node.value);
 
       if (node.left) {
         traverse(node.left);
@@ -25,27 +25,32 @@ class Tree {
       if (node.right) {
         traverse(node.right);
       }
-    };
 
+    };
     traverse(this.root);
+    return values;
   }
 
   postOrder() {
+    const values = [];
     const traverse = (node) => {
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
-      console.log(node.value);
+      values.push(node.value);
     };
     traverse(this.root);
+    return values;
   }
 
   inOrder() {
+    const values = [];
     const traverse = (node) => {
       if (node.left) traverse(node.left);
-      console.log(node.value);
+      values.push(node.values);
       if (node.right) traverse(node.right);
     };
     traverse(this.root);
+    return values;
   }
 
 }
