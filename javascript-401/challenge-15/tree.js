@@ -89,8 +89,14 @@ class BinaryTree extends Tree {
   }
 
   contains(value) {
-    return this.postOrder.contains(value);
+    return this.postOrder().includes(value);
+    /* without an array method
+        for (let num of this.postOrder()) {
+          if (num === value) return true;
+        }
+        return false;
+      }
+      */
   }
-
 }
 module.exports = { Node, Tree, BinaryTree };

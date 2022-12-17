@@ -84,6 +84,36 @@ describe('Tree', () => {
     expect(tree.postOrder()).toEqual([25, 30, 55, 50, 45]);
   });
 
+  test('Can successfully return a collection from a postorder traversal', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+    tree.add(25);
+    tree.add(55);
+    expect(tree.postOrder()).toEqual([25, 30, 55, 50, 45]);
+  });
+
+
+  test('Can return true if value is contained within the tree when contains method is called', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+    tree.add(25);
+    tree.add(55);
+    expect(tree.contains(30)).toBe(true);
+  });
+
+  test('Can return false if value is not contained within the tree when contains method is called', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+    tree.add(25);
+    tree.add(55);
+    expect(tree.contains(31)).toBe(false);
+  });
 
 });
 
