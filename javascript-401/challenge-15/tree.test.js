@@ -1,6 +1,6 @@
 'use strict';
 
-const { Node, Tree } = require('./tree');
+const { Node, Tree, BinaryTree } = require('./tree');
 
 describe('Tree', () => {
   it('can be created as expected', () => {
@@ -25,4 +25,67 @@ describe('Tree', () => {
     tree.root.right.right = new Node(9);
     expect(tree.preOrder()).toEqual([11, 15, 1, 3, 45, 9]);
   });
+
+  it('Can successfully instantiate an empty tree', () => {
+    let tree = new BinaryTree();
+    expect(tree.root).toBeNull();
+  });
+
+  it('Can successfully instantiate a tree with a single root node', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    expect(tree.root.value).toEqual(45);
+    expect(tree.root.left).toBeNull();
+    expect(tree.root.right).toBeNull();
+
+  });
+
+  test('For a Binary Search Tree, can successfully add a left child and right child properly to a node', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+
+    expect(tree.root.value).toEqual(45);
+    expect(tree.root.left.value).toEqual(30);
+    expect(tree.root.right.value).toEqual(50);
+
+  });
+
+  test('Can successfully return a collection from a preorder traversal', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+    tree.add(25);
+    tree.add(55);
+
+    expect(tree.preOrder()).toEqual([45, 30, 25, 50, 55]);
+  });
+
+  test('Can successfully return a collection from an inorder traversal', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+    tree.add(25);
+    tree.add(55);
+
+    expect(tree.inOrder()).toEqual([25, 30, 45, 50, 55]);
+  });
+
+  test('Can successfully return a collection from a postorder traversal', () => {
+    let tree = new BinaryTree();
+    tree.add(45);
+    tree.add(30);
+    tree.add(50);
+    tree.add(25);
+    tree.add(55);
+    expect(tree.postOrder()).toEqual([25, 30, 55, 50, 45]);
+  });
+
+
 });
+
+
+

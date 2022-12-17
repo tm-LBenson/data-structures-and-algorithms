@@ -48,7 +48,7 @@ class Tree {
     const values = [];
     const traverse = (node) => {
       if (node.left) traverse(node.left);
-      values.push(node.values);
+      values.push(node.value);
       if (node.right) traverse(node.right);
     };
     traverse(this.root);
@@ -67,18 +67,21 @@ class BinaryTree extends Tree {
   add(value) {
     const node = new Node(value);
     if (!this.root) return this.root = node;
+
     const traverse = (node) => {
-      if (this.root.value > node.value) {
+      if (node.value > value) {
         if (node.left) {
           traverse(node.left);
         } else {
-          node.left = node;
+          node.left = new Node(value);
+          return;
         }
       } else {
         if (node.right) {
-          traverse(node.right)
+          traverse(node.right);
         } else {
-          node.right = node;
+          node.right = new Node(value);
+          return;
         }
       }
     };
