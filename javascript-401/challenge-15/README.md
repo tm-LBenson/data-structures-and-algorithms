@@ -16,7 +16,7 @@ Build a binary tree and a binary search tree with a recursive approach.
 
 ## API
 
-Can successfully instantiate an empty tree
+-Can successfully instantiate an empty tree
 Can successfully instantiate a tree with a single root node
 For a Binary Search Tree, can successfully add a left child and right child properly to a node
 Can successfully return a collection from a preorder traversal
