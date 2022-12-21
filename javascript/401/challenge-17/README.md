@@ -2,7 +2,7 @@
 
 Code Challenge 17
 
-[Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript/401/challenge-16)
+[Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript/401/challenge-17)
 
 ## Challenge
 
