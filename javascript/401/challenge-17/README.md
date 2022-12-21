@@ -1,29 +1,25 @@
-# Binary-Search-Tree
+# Breadth-First
 
-Code Challenge 15
+Code Challenge 17
 
 [Link to code](https://github.com/tm-LBenson/data-structures-and-algorithms/tree/main/javascript/401/challenge-16)
 
 ## Challenge
 
-Build a binary tree class and a method to find the max value
+Create a function to navigate a binary tree Breadth First
 
 ## Approach & Efficiency
 
-Build a binary tree and a binary search tree with a recursive approach.
+Iterate over the tree using a Queue to add each node
 
-![whiteboard-15](./whiteboard.png)
+![whiteboard-17](./whiteboard.png)
 
 ## API
 
--Can successfully instantiate an empty tree
-
-Can successfully instantiate a tree with a single root node
-
-Can successfully return the highest number in the tree by calling the `maxValue` method.
+- Returns an array with all the values in the correct order for a breadth traversal
 
 ### Feature 1:
 
-`maxValue()`
-arguments: none
-Returns: The highest integer within the tree.
+`breadthFirstTraverse(tree)`
+arguments: tree
+Returns:An array with all values in the order of breadthFrist
