@@ -10,6 +10,7 @@ The challenge is to implement a function called firstInstance that takes in a st
 
 The time complexity for the firstInstance function is O(n), where n is the number of words in the string, since the function must iterate through the array of words to find the first repeated word. The space complexity is O(n), since the function uses a hash table to store the words in the string.
 
+![image](https://user-images.githubusercontent.com/105423307/211415281-4f766a3d-121c-4222-8d8a-1311ebaaefdf.png)
 
 
 ## API
