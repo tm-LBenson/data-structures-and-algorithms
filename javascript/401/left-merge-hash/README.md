@@ -6,4 +6,7 @@ A hash table is a data structure that is used to store keys and values. The keys
 
 ## Approach & Efficiency
 
+![image](https://user-images.githubusercontent.com/105423307/211943049-dd8f49e4-65f2-4c7f-9d56-dd1a76c25f69.png)
+
+
 ## API
