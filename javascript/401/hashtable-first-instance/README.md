@@ -4,21 +4,20 @@ A hash table is a data structure that is used to store keys and values. The keys
 
 ## Challenge
 
-The challenge is to implement a function called firstInstance that takes in a string and returns the first word that appears more than once in the string. The function should use a hash table to store the words in the string and keep track of the number of times each word appears.
+The challenge is to implement a function called leftJoin that takes in two hash tables and performs a left join on the data. The function should return an array of arrays, where each array contains a key, its value from the left table, and its value from the right table.
 
 ## Approach & Efficiency
 
-The time complexity for the firstInstance function is O(n), where n is the number of words in the string, since the function must iterate through the array of words to find the first repeated word. The space complexity is O(n), since the function uses a hash table to store the words in the string.
-
-![image](https://user-images.githubusercontent.com/105423307/211415281-4f766a3d-121c-4222-8d8a-1311ebaaefdf.png)
-
+The time complexity for the `leftJoin` function is O(n), where n is the number of keys in the left hash table, since the function must iterate through the left hash table and check if each key is present in the right hash table. The space complexity is O(n), since the function uses an array to store the results of the join operation, where n is the number of keys in the left hash table.
 
 ## API
 
-`firstInstance(string)`
-This function takes in a string and returns the first word that appears more than once in the string. If no repeated words are found, the function returns null.
+`leftJoin(leftMap, rightMap)`
+This function takes in two hash tables, performs a left join on the data and returns an array of arrays, where each array contains a key, its value from the left table, and its value from the right table.
 
 Arguments
-string: The string to search for repeated words.
+leftMap: The primary hash table to be used for the join operation.
+rightMap: The secondary hash table to be used for the join operation.
+
 Returns
-The first word that appears more than once in the string, or null if no repeated words are found.
+An array of arrays where each array contains a key, its value from the left table, and its value from the right table.
