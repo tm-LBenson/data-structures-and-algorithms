@@ -10,6 +10,9 @@ The challenge is to implement a function called repeatedValues That takes in two
 
 The time complexity for the repeatedValues function is O(n), where n is the number of nodes in each tree, since the function must iterate through the map of values. The space complexity is O(n), since the function uses a hash table to store the values.
 
+![image](https://user-images.githubusercontent.com/105423307/211716376-f7123e80-276a-42f1-9bc9-f29ba46fcf6f.png)
+
+
 ## API
 
 `repeatedValues(tree, tree2)`
