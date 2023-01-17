@@ -13,6 +13,7 @@ Returns the modified linked list
 
 ## Approach & Efficiency
 
+
 - The function first checks if the list is empty, in which case it returns null.
 
 - If the position to be removed is the first node, the head of the list is updated to the next node and the list is returned.
@@ -22,6 +23,8 @@ Returns the modified linked list
 - When the desired position is reached, the previous node's next pointer is updated to the current node's next pointer, effectively removing the current node from the list.
 
 - The function then returns the modified list.
+
+![Screenshot from 2023-01-16 19-27-44](https://user-images.githubusercontent.com/105423307/212785082-aef9bbb1-0754-4b74-ae9a-010967a6fea7.png)
 
 ## Time and Space Complexities
 
