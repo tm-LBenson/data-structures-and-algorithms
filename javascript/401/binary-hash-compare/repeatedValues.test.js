@@ -18,7 +18,7 @@ tree2.add(601);
 tree2.add(110);
 tree2.add(2001);
 tree2.add(51);
-console.log(tree);
+
 describe("Repeated Values Unit testing", () => {
   it("returns null if no match is made", () => {
     expect(repeatedValues(tree, tree2)).toBeNull();
