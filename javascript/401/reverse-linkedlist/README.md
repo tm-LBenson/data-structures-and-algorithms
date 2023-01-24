@@ -2,6 +2,9 @@
 
 A function that reverses a singly linked list.
 
+![image](https://user-images.githubusercontent.com/105423307/213320010-a001588c-ff76-4000-8751-39dae6dc2c7c.png)
+
+
 ## Parameters
 
 list: A singly linked list object
