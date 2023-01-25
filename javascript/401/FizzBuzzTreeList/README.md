@@ -10,6 +10,9 @@ Returns a number representing the most common value in the tree. Returns null if
 ## Approach & Efficiency
 The function first checks if the tree is empty, in which case it returns null.
 
+![image](https://user-images.githubusercontent.com/105423307/214479706-fbf75048-7c8a-43df-9a55-ada9fef46b1b.png)
+
+
 If the tree is not empty, the function creates a new Map object to store the frequency of each value in the tree.
 
 The function then uses a helper function called traverse to recursively iterate through the tree starting at the root node.
