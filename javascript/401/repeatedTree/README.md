@@ -18,6 +18,9 @@ The traverse function first calls itself on the left child of the current node, 
 
 The function then iterates through the Map to find the most common value and returns it.
 
+![image](https://user-images.githubusercontent.com/105423307/214320801-0b0308eb-1853-4be0-8371-4e97f369c9cd.png)
+
+
 ## Time and Space Complexities
 Time Complexity: O(n) - as the function iterates through the tree one time.
 Space Complexity: O(n) - as the function uses a space proportional to the number of nodes in the tree for the hash map.
